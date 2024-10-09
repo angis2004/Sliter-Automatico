@@ -1,77 +1,51 @@
 
 
-body{
-    /* background-color: #333; */
+.position {
+    position: absolute ; 
+    width: 90%; 
+    height:100%; 
+    left: 5%;
+    right: 10%;
+  
+    background-position: center; 
+    /* transition: background-image 1s ease-in-out; */
+    
 }
 
-
-.position{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
-}
 
 .slider{
-    background-image: url(https://webapps.gruposam.com.pe/splv-web-demo/content/img/FONDO_TICKET.jpg);
     background-size: cover;
     background-position: center; 
     height: 90%;
     width: 80%;
-    border-radius: 10px;
-    animation: animate 10s infinite ;
-}
-/* animate 10s infinite */
-
-@keyframes animate {
-    
-20%{
-
-    background-image: url(https://webapps.gruposam.com.pe/splv-web-demo/content/img/FONDO_TICKET.jpg);
-    background-size: cover;
-   
+    /* animation: animate 10s infinite ; */
 }
 
-40%{
-    background-image: url(https://apinoad.gruposam.com.pe/hub-promociones/api/sisprom/comun/imagen/VISUALLOTTERY/SORTEO/IMAGENES/41c4c7fd-8dc1-47ca-8d8e-120733c01fbb_LISTA-DE-PARTICIPANTES-H-SORTEO.jpg);
-    background-size: cover;
-}
 
-60%{
-    background-image: url(https://apinoad.gruposam.com.pe/hub-promociones/api/sisprom/comun/imagen/VISUALLOTTERY/SORTEO/IMAGENES/e1e2e157-0c90-474b-87b5-c09906b7d7a7_LISTA-PARTICIPANTES-H.jpg);
-    background-size: cover;
-   
-}
 
-80%{
-    background-image: url(https://apinoad.gruposam.com.pe/hub-promociones/api/sisprom/comun/imagen/VISUALLOTTERY/SORTEO/IMAGENES/8048e508-6aba-4abc-8e88-ab7674c89c0a_Pantalla-Ganadores.jpg);
-    background-size: cover;
-   
-}
-100%{
-    background-image: url('https://apinoad.gruposam.com.pe/hub-promociones/api/sisprom/comun/imagen/VISUALLOTTERY/SORTEO/IMAGENES/9134ad37-4518-4f8b-be07-a03b8a1112cc_PANTALLA HORIZONTAL ESCENARIO PARTICIPANTE.jpg');
-    background-size: cover;
-}
 
-}
+  @media screen and (min-width: 671px) {
 
-/*DISPOSITIVOS MOVILES **/
+    .slider {
+    width: 100%; 
+    height: 100%; 
+    background-position: center; 
+    }
+} 
+ 
 
-@media screen and (max-width: 670px){
-    .slider{
+/* Dispositivos móviles */
+@media screen and (max-width: 670px) {
+    .slider {
         width: 100%;
         height: 300px;
         margin-top: 50%;
         background-position: center; 
-        
-        background-size: no-repeat;
+        background-size: cover; 
+
     }
-    .position{
+    .position {
         position: relative;
     }
-    body{
-       /* background-color: red; */
-        /*HACER ESTO CON JAVASCRIP  PARA QUE CONSUMA ESA URL 
-        Y NO CON CSSS*/
-    }
 }
+
